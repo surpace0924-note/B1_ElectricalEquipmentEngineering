@@ -1,0 +1,137 @@
+\section{直流電動機}
+\subsection{直流電動機}
+直流電動機は直流を入力とする電動機．構造は直流発電機と同じ．
+
+  \pic{imgs/dummy.png}
+
+
+  \pic{imgs/dummy.png}
+
+
+\subsection{逆起電力}
+発電機と同様に起電力が発生し，電機子電流を妨げるように働く．\\
+
+　(\ref{DC_Electromotiveforce})式と同じ
+\begin{equation}
+  \label{DC_E_2}
+  E =  \frac{Z}{a} \cdot p \phi n  = K \cdot \phi n \, [\textrm{V}]
+\end{equation}
+この時，電機子電流$I_a$は
+\begin{equation}
+  \label{DC_Ia}
+  I_a = \frac{V-E}{R_a}\, [\textrm{A}]
+\end{equation}
+\begin{subnumcases}
+  {}
+  V:\mbox{端子電圧}[\textrm{V}]\nonumber \\
+  E:\mbox{起電力}[\textrm{V}]\nonumber \\
+  R_a:\mbox{電機子巻線抵抗}[\Omega]\nonumber \\
+  I_a:\mbox{電機子電流}[\textrm{A}]\nonumber
+\end{subnumcases}
+端子電圧と内部電圧降下との関係は(\ref{DC_Ia})式を変形して
+\begin{equation}
+  \label{DC_V}
+  V = E + R_a \cdot I_a\, [\textrm{V}]
+\end{equation}
+
+\subsection{速度}
+直流電動機の回転速度$n[\textrm{rps}]$は逆起電力に比例し，1極あたりの磁束に反比例する．
+(\ref{DC_E_2})式を変形して
+\begin{eqnarray}
+  n &=& \frac{E \cdot a}{p \cdot \phi \cdot Z}\, [\textrm{rps}] \\
+  n &=& K \cdot \frac{E}{\phi}\, [\textrm{rps}] \\
+  n &=& K \cdot \frac{V - (R_a \cdot I_a)}{\phi}\, [\textrm{rpm}]
+\end{eqnarray}
+
+\subsection{トルク}
+導体1本に加わる力$f$は
+\begin{equation}
+  \label{DC_F}
+  f = Bl \cdot \frac{I_a}{a}\, [\textrm{N}]
+\end{equation}
+
+導体1本のトルク$t$は以下の式で求まる（電機子の半径を$r$とする）
+\begin{equation}
+  \label{DC_T_basic}
+  t = f \cdot r = \frac{BlI_ar}{a}\, [\textrm{Nm}]
+\end{equation}
+
+ここで$B$は
+\begin{equation}
+  \label{DC_B}
+  B = \frac{\phi}{\frac{2 \pi r l}{p}} = \frac{p \phi}{2 \pi r l}\, [\textrm{T}]
+\end{equation}
+
+(\ref{DC_T_basic})式と(\ref{DC_B})式より
+\begin{equation}
+  \label{T_basic}
+  t = \frac{p \phi I_a}{2 \pi a}\, [\textrm{Nm}]
+\end{equation}
+
+最後に全導体数$Z$をかけて全体のトルク$T$を出す
+\begin{equation}
+  \label{T_basic}
+  T = \frac{p \phi I_a}{2 \pi a} \cdot Z = K_2 \cdot \phi I_a\, [\textrm{Nm}]
+\end{equation}
+
+\subsection{出力}
+(\ref{DC_V})の両端に$I_a$をかけると
+\begin{equation}
+  VI_a = EI_a + R_a{I_a}^2\, [\textrm{W}]
+\end{equation}
+
+機械的動力に変換される電力$P_m$は
+\begin{equation}
+  P_m = EI_a = 2 \pi nT\, [\textrm{W}]
+\end{equation}
+
+電動機の出力は
+\begin{equation}
+  P = P_m - (\mbox{鉄損} + \mbox{機械的諸損失})\, [\textrm{W}]
+\end{equation}
+
+\subsection{電圧変動率}
+電動機を定格電圧，定格出力で運転して，定格負荷から無負荷にした時の電圧変動の割合．
+\begin{equation}
+  \epsilon = \frac{V_0 - V_n}{V_n} \cdot 100\, [\textrm{\%}]
+\end{equation}
+\begin{subnumcases}
+  {}
+  \epsilon:\mbox{電圧変動率}[\textrm{V}]\nonumber \\
+  V_0:\mbox{無負荷電圧}[\textrm{V}]\nonumber \\
+  V_n:\mbox{定格電圧}[\Omega]\nonumber
+\end{subnumcases}
+
+\subsection{電機子反作用}
+電動機の電気的中性軸は，発電機の反対方向へ移動する．
+
+\subsection{始動}
+\begin{itemize}
+  \item 静止状態の電動機を運転状態に移すこと．
+  \item 始動器を用いることがある．
+\end{itemize}
+
+\subsection{損失}
+\begin{itemize}
+  \item 一部のエネルギーは熱となって失われ，損失となる．
+  \item 機械損，鉄損，銅損（抵抗損），浮遊負荷損など．
+\end{itemize}
+
+\subsection{効率}
+\begin{itemize}
+  \item 実測効率と規約効率の二つ．
+  \item 一般的には規約効率が用いられる．
+\end{itemize}
+
+\begin{eqnarray}
+  \mbox{実測効率} &=& \frac{\mbox{出力}}{\mbox{入力}} \cdot 100\, [\textrm{\%}] \\
+  \mbox{規約効率(発電機)} &=& \frac{\mbox{出力}}{\mbox{出力} + \mbox{損失}} \cdot 100\, [\textrm{\%}] \\
+  \mbox{規約効率(電動機)} &=& \frac{\mbox{入力} - \mbox{損失}}{\mbox{入力}} \cdot 100\, [\textrm{\%}]
+\end{eqnarray}
+
+\subsection{定格}
+\begin{itemize}
+  \item 出力の限度．
+  \item その他定格速度，定格電圧，定格電流 etc.
+  \item 定格には$n$をつけることがほとんど．$Pn$，$Vn$ etc.
+\end{itemize}

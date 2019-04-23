@@ -1,0 +1,179 @@
+\section{送配電}
+\subsection{送電電圧}
+\begin{itemize}
+  \item 発電所で発電した電力は送電・配電線によって需要家に送られる．
+  \item 送電電圧は高圧が6.6kVそのほかに特別高圧・超高圧（11〜275kV），超々高圧（500kV）などが決められている．
+\end{itemize}
+
+\subsection{送電の流れ}
+\begin{enumerate}
+  \item 発電された電圧は154〜500kVに昇圧され，一次送電線（基幹送電線）で送電する．
+  \item 一次変電所から二次変電所や特別高圧需要家に送られる．
+  \item 二次送電線を介して，一般の事業所や工場，家庭などに配電される．
+\end{enumerate}
+
+\subsection{周波数}
+\begin{itemize}
+  \item 東日本　→　50Hz（ドイツ製）
+  \item 西日本　→　60Hz（アメリカ製）
+  \item 周波数変換所により，東西で融通できる
+\end{itemize}
+
+\subsection{力率}
+\begin{itemize}
+  \item 以下，電圧実効値を$V$，電流実効値を$I$，有効電力を$P$．
+  \item 皮相電力$S=VI$
+  \item 力率$=P$/$S$$=cos\phi$
+  \item 有効電力$P=VIcos\phi$
+  \item 位相差が生じる場合（主に誘導性負荷），力率改善のために進相コンデンサを挿入する．
+\end{itemize}
+
+\subsection{三相回路}
+
+  \pic{imgs/dummy.png}
+
+\begin{itemize}
+  \item 三相回路のO点は中性点と呼ばれ，0Vになる．
+  \item Y形の接続をスター結線という．
+  \item $E_a$，$E_b$，$E_c$　　→　相電圧
+  \item $V_ab$，$V_bc$，$V_ca$　→　線間電圧
+\end{itemize}
+
+\subsection{送電線}
+\begin{itemize}
+  \item 架空送電線と地中送電線がある．
+  \item 電力が大きく，距離が大きいほど，高電圧で送電する方が線路損失が小さくなる．
+\end{itemize}
+
+\subsubsection{架空送電線}
+\begin{itemize}
+  \item 送電用鉄塔，電力線，架空地線，がいしなどで構成．
+  \item 電力線　：鋼心アルミ撚り線が用いられる．
+  \item がいし　：電力線と送電鉄塔とを電気的に絶縁する．
+  \item 架空地線：落雷などによる電力線への雷撃を防ぐもの（接地されていて，送電には用いない）．
+\end{itemize}
+
+  \pic{imgs/dummy.png}
+
+
+\subsubsection{地中送電線}
+\begin{itemize}
+  \item 国内の都市や郊外で使用されるようになってきた．
+  \item メリット　：用地が少ない，美観，落雷の心配がない
+  \item デメリット：建設費用が高い．送電容量が小さい．復旧に時間がかかる．
+  \item ケーブル　：OF（oil filled）ケーブル，CVケーブルが主に使われる．
+\end{itemize}
+
+\subsection{変電所の機器}
+\begin{itemize}
+  \item 変電所には変圧器，開閉装置，保護装置，調相設備などがある．
+\end{itemize}
+
+\subsubsection{変圧器}
+\begin{itemize}
+  \item 昇圧や降圧を行う．
+\end{itemize}
+
+\subsubsection{開閉装置}
+\begin{itemize}
+  \item 遮断器と断路器を指す．
+  \item 遮断器：電力系統から切り離す．
+  \item 断路器：遮断器が切れている状態で各種機器と開閉する．
+\end{itemize}
+
+\subsubsection{保護装置}
+\begin{itemize}
+  \item 主に避電器を指す．
+  \item 電力系統に発生する雷サージや開閉サージから保護する
+\end{itemize}
+
+\subsubsection{GIS}
+\begin{itemize}
+  \item ガス絶縁開閉装置（Gas Insulated Switchgear）の略
+  \item 遮・断・避・開などを収納し，$SF_6$ガスを充満した装置．
+\end{itemize}
+
+\subsubsection{調相設備}
+\begin{itemize}
+  \item 負荷の力率改善や無効電力調整を行う．
+\end{itemize}
+
+\subsection{配電システム}
+\begin{itemize}
+  \item 高圧配電線から柱上変圧器で低圧にして，一般家庭へ配電．
+  \item 線間電圧によって以下のように区分．
+  \item 低圧　　：600V以下
+  \item 高圧　　：7kV以上
+  \item 特別高圧：それ以上
+\end{itemize}
+
+\subsection{低圧配電系統}
+\begin{itemize}
+  \item 単相2線式：コンセント用　（100 or 200V）
+  \item 単相3線式：中性線入り　　（100 or 200V）
+  \item 三相3線式：Δ結線を用いた（200V）
+\end{itemize}
+
+\subsection{負荷の特性}
+\begin{itemize}
+  \item 負荷曲線：負荷の変動を時間的に表した曲線
+  \item 需要率　：最大需要電力の設備容量に対する比率
+\end{itemize}
+\begin{eqnarray}
+  \mbox{負荷率} &=& \frac{\mbox{平均負荷電力}}{\mbox{最大負荷電力}} \cdot 100\, [\textrm{\%}]\\
+  \mbox{需要率} &=& \frac{\mbox{最大需要電力}}{\mbox{設備容量}} \cdot 100\, [\textrm{\%}]
+\end{eqnarray}
+
+\subsection{電圧降下}
+\begin{itemize}
+  \item 受電端電圧 = 送電端電圧 - 電圧降下
+  \item 国内では100Vは101±6V，200Vは202±20Vの範囲内に維持されるように電圧制御が行われている．
+\end{itemize}
+
+\subsection{力率調整}
+\begin{itemize}
+  \item 損失低減のために，受電端に電力用コンデンサを挿入して，負荷力率を改善する．
+\end{itemize}
+\begin{equation}
+  \mbox{基本料金} = (\mbox{契約基本料金}) \cdot (1 + \frac{85 - \mbox{力率}}{100})
+\end{equation}
+
+\subsection{電力品質}
+\begin{itemize}
+  \item 気候で変動するエネルギーにより，電力品質の低下する．
+  \item 電力品質のパラメータとして，高調波や瞬時電圧降下がある．
+  \item 対策として，無停電電源装置（UPS）が有効
+\end{itemize}
+
+\subsection{直流送電}
+\begin{itemize}
+  \item 交流への変換装置が必要　→　経済的に不利
+  \item 遮断が難しい．
+  \item 長距離大電力送電に適してる．
+  \item 送電経路が「+」「-」だけのため，建設費が安価．
+  \item 電圧降下や電力損失が少ない．
+\end{itemize}
+
+\subsection{交流送電}
+\begin{itemize}
+  \item 変圧器が使える．
+  \item 回転機のメンテナンスが容易．
+\end{itemize}
+
+\subsection{交直変換所}
+\begin{itemize}
+  \item 交流と直流を変換する変換所
+  \item 交直変換装置，サイリスタバルブなど
+\end{itemize}
+
+\subsubsection{交直変換装置}
+\begin{itemize}
+  \item AC → DC：コンバータ
+  \item DC → AC：インバータ
+\end{itemize}
+
+\subsubsection{サイリスタバルブ}
+\begin{itemize}
+  \item 高電圧，大容量のサイリスタ素子を多数個組み合わせたもの．
+  \item 整流器の役割．
+\end{itemize}

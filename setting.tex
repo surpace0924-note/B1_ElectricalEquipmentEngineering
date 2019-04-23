@@ -1,0 +1,39 @@
+\documentclass[autodetect-engine,dvipdfmx-if-dvi,ja=standard]{bxjsarticle}
+
+% 二段組にするとき
+% \documentclass[twocolumn,autodetect-engine,dvipdfmx-if-dvi,ja=standard]{bxjsarticle}
+
+\setlength{\topmargin}{-0.3in}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\textheight}{46\baselineskip}
+\usepackage{graphicx}     %図を表示するのに必要
+\usepackage{color}        %jpgなどを表示するのに必要
+% \usepackage[dvipdfmx]{graphicx}     %図を表示するのに必要
+% \usepackage[dvipdfmx]{color}        %jpgなどを表示するのに必要
+\usepackage{amsmath,amssymb}        %数学記号を出すのに必要
+\usepackage{setspace}
+\usepackage{eclclass}
+\usepackage{cases}
+\usepackage{here}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\rhead{\leftmark}
+\lhead{\rightmark}
+
+% 式の番号を(senction_num.num)のよう
+\makeatletter
+\@addtoreset{equation}{section}
+\def\theequation{\thesection.\arabic{equation}}
+\makeatother
+
+% 画像の貼り付けを簡単にする
+\newcommand{\pic}[1]
+{
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth/2]{#1}
+    \end{center}
+  \end{figure}
+}

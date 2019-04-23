@@ -1,0 +1,155 @@
+\section{直流発電機}
+\subsection{直流発電機}
+\begin{itemize}
+  \item 電機子：磁束を切って起電力を誘導させる部分
+  \item 界磁　：電機子に通じる磁束を作る部分
+  \item ブラシ：整流子と接して，誘導起電力を取り出す
+  \item 整流子：ブラシに接して誘導起電力を整流して直流にする部分
+\end{itemize}
+
+\subsubsection{電機子}
+電機子鉄心，電機子巻線，整流子で構成される．
+
+\subsubsection{電機子鉄心}
+界磁とともに磁気回路を作る部分．
+うず電流やヒステリシス現象による鉄損を生じる．
+\begin{enumerate}
+  \item 成層鉄心：鉄損を少なくするため，けい素鋼板を積み重ねた成層鉄心を用いる
+  \item スロット：巻線を収めるための溝
+  \item 歯　　　：スロットの間のこと
+\end{enumerate}
+
+\subsubsection{電機子巻線}
+電機子の巻線，一般に亀甲型コイルを使用する．
+
+\subsubsection{単相巻きと二層巻き}
+スロット内にひとつのコイル片を納める方法を単相巻き，スロット内に二つを二層巻き．
+\subsubsection{重ね巻と波巻}
+鼓状巻きでは，重ね巻と波巻の二つの方法がある．
+\paragraph*{重ね巻\\}
+並列回路を作る．並列巻とも呼ばれる．\\
+　極数＝回路数\\
+　低電圧・大電流
+\paragraph*{波巻\\}
+極数によらず二つの並列回路を作る．直列巻とも呼ばれる．\\
+　高電圧・定電流
+\subsubsection{整流子}
+常にブラシと接しているため，丈夫に作られる．整流子片と絶縁片が交互に組み合わされている．
+\subsubsection{ブラシ}
+ブラシは中性軸ごとにおく必要がある．重ね巻ではブラシ数と極数が等しい．
+
+\subsection{電機子反作用}
+磁束の流れに偏りができること．
+電機子反作用での軸ずれを考慮しない中性軸を幾何学的中性軸，考慮したものを電気的中性軸という．
+\subsubsection{主磁束}
+磁極の作る磁束
+\subsubsection{交さ起磁力}
+電機子だけに電流を流した場合
+\subsubsection{偏磁作用}
+主磁束と交さ起磁力を合わせたもの．
+これが電機子反作用．
+\subsubsection{補償巻線}
+電機子反作用対策のひとつ．電機子電流と逆方向に電流を流し，電機子の起電力を打ち消す．
+
+\subsection{誘導起電力}
+電機子導体一本に誘導される起電力の平均は
+\begin{eqnarray}
+  e &=& vBl\, [\textrm{V}] \\
+  v &=& \pi Dn\, [\textrm{m/s}] \\
+  e' &=& Bl\pi Dn\, [\textrm{V}]
+\end{eqnarray}
+
+
+ブラシ間で得られる直流起電力$E$は
+\begin{equation}
+  \label{DC_Electromotiveforce}
+  E = \frac{Z}{a} \cdot e = \frac{Z}{a} \cdot p \phi n\, [\textrm{V}]
+\end{equation}
+ただし．
+\begin{subnumcases}
+  {}
+  e:\mbox{誘導起電力の平均}[\textrm{V}]\nonumber \\
+  v:\mbox{周速度}[\textrm{m/s}]\nonumber \\
+  B:\mbox{ギャップの平均磁束密度}[\textrm{T}]\nonumber \\
+  l:\mbox{コイル片の有効長さ}[\textrm{m}]\nonumber \\
+  D:\mbox{電機子直径}[\textrm{m}]\nonumber \\
+  n:\mbox{回転速度}[\textrm{rps}]\nonumber \\
+  a:\mbox{並列回路数}\nonumber \\
+  Z:\mbox{電機子巻線の全導体数}\nonumber \\
+  p:\mbox{極数}\nonumber \\
+  \phi:\mbox{1極から出る磁束}[\textrm{Wb}]\nonumber
+\end{subnumcases}
+
+\subsection{直流発電機の種類}
+主に他例発電機，分巻発電機，直巻発電機，マグネト発電機，複巻発電機がある．\\
+　この後，出てくるパラメータを下に示す．
+\begin{subnumcases}
+  {}
+  V:\mbox{端子電圧}[\textrm{V}]\nonumber \\
+  E:\mbox{起電力}[\textrm{V}]\nonumber \\
+  R_a:\mbox{電機子巻線抵抗}[\Omega]\nonumber \\
+  R_s:\mbox{界磁巻線抵抗}[\Omega]\nonumber \\
+  I:\mbox{負荷電流}[\textrm{A}]\nonumber \\
+  V_b:\mbox{ブラシの電圧降下}[\textrm{V}]\nonumber \\
+  V_c:\mbox{電機子反作用による電圧降下}[\textrm{V}]\nonumber \\
+  P:\mbox{出力}[\textrm{W}]\nonumber \\
+  P':\mbox{発生電力}[\textrm{VA}]\nonumber \\
+  I_f:\mbox{界磁電流}[\textrm{A}]\nonumber \\
+  R_f:\mbox{界磁抵抗}[\Omega]\nonumber
+\end{subnumcases}
+
+\subsubsection{他励発電機}
+磁界を発生させる界磁巻線の電源が別電源．
+\pic{imgs/dummy.png}
+\begin{eqnarray}
+  V &=& E-R_a I - (V_b + V_c)\, [\textrm{V}] \\
+  P &=& VI \\
+  P' &=& EI
+\end{eqnarray}
+
+\subsubsection{分巻発電機}
+自励発電機であり，界磁巻線が並列の発電機
+
+  \pic{imgs/dummy.png}
+
+\begin{eqnarray}
+  V &=& E-R_a (I+I_f) - (V_b + V_c)\, [\textrm{V}] \\
+  P &=& VI \\
+  P' &=& E(I+I_f) \\
+  I_f &=&\frac{V}{R_f}\, [\textrm{A}]
+\end{eqnarray}
+
+\subsubsection{直巻発電機}
+自励発電機であり，界磁巻線が直列の発電機
+
+  \pic{imgs/dummy.png}
+
+\begin{eqnarray}
+  V &=& E-(R_a+R_s)I - (V_b + V_c)\, [\textrm{V}] \\
+  P &=& VI \\
+  P' &=& EI
+\end{eqnarray}
+
+\subsubsection{複巻発電機}
+\begin{itemize}
+  \item 自励発電機であり，界磁巻線が分巻と直巻の発電機
+  \item 和動複巻直流発電機：磁気を強め合う極性
+  \item 差動複巻直流発電機：磁気を相殺し合う極性
+\end{itemize}
+
+\subsubsection{マグネト発電機}
+\begin{itemize}
+  \item 永久磁石を用いた発電機
+\end{itemize}
+
+\subsection{発電機の特性}
+\begin{itemize}
+  \item 無負荷飽和曲線：回転速度一定で無負荷状態の界磁電流と誘導起電力の関係を示す
+  \item 外部特性曲線　：負荷電流に対する端子電圧の関係を示す
+  \item 無負荷飽和曲線は分巻も基本は同様．
+  \item 直巻は「負荷電流＝界磁電流」のため．無負荷飽和曲線はない．
+\end{itemize}
+
+
+  \pic{imgs/dummy.png}
+

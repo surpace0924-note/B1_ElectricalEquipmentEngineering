@@ -1,0 +1,133 @@
+\section{同期機}
+\subsection{同期機}
+\begin{classify}{\fbox{同期機}}
+\class
+{
+  \begin{classify}{\fbox{発電機}}
+    \classf{水車}
+    \classf{タービン}
+    \classf{エンジン}
+    \classf{その他}
+\end{classify}
+}
+\classf{電動機}
+\classf{その他}
+\end{classify}
+
+\begin{itemize}
+  \item 同期速度で回転する交流機．
+  \item 同期発電機と同期電動機がある．
+  \item 回転電機子形　→　電機子が回転子，磁極が固定子
+  \item 回転磁界形　　→　電機子が固定子，磁極が回転子
+\end{itemize}
+
+\subsection{誘導起電力}
+\begin{equation}
+  E = 4.44 \cdot f k w \phi\, [\textrm{V}]
+\end{equation}
+\begin{subnumcases}
+  {}
+  E:\mbox{誘導起電力}[\textrm{V}]\nonumber \\
+  f:\mbox{周波数}[\textrm{Hz}]\nonumber \\
+  k:\mbox{巻線係数}\nonumber \\
+  w:\mbox{1相のコイルの巻き数}\nonumber \\
+  \phi:\mbox{1極の平均磁束}[\textrm{Wb}]\nonumber
+\end{subnumcases}
+
+\subsection{2次電流}
+2次巻線の1相リアクタンスを$sx_2$として
+\begin{equation}
+  I_2 = \frac{E_2s}{r_2 + j s x_2}\, [\textrm{A}]
+\end{equation}
+
+\subsection{単相}
+\begin{itemize}
+  \item 小型交流電動機のほとんどは単相誘導電動機
+  \item 回転子はかご形
+  \item くま取りコイル形電動機，くま取りコイル
+\end{itemize}
+
+\subsection{始動法}
+\begin{itemize}
+  \item 三相では定格を直接入れるじか入れ始動などが使用される
+  \item 単相では，補助として始動巻線が必要．
+\end{itemize}
+
+\subsection{特性曲線}
+\begin{itemize}
+  \item 無負荷飽和曲線，三相短絡曲線，負荷飽和曲線，外部特性曲線
+\end{itemize}
+
+\subsubsection{無負荷飽和曲線}
+\begin{itemize}
+  \item 定格速度で回転させた時の無負荷時における界磁電流と発電機端子電圧の関係
+\end{itemize}
+
+\subsubsection{三相短絡曲線}
+\begin{itemize}
+  \item 定格速度で回転中の発電機を三相短絡させたときの，界磁電流と電機子電流の関係を示すもの．
+\end{itemize}
+
+  \pic{imgs/dummy.png}
+
+\begin{itemize}
+  \item $I_f'$：定格電圧を発生させる界磁電流．
+  \item $I_f'$：三相短絡曲線の定格電流を流す界磁電流．
+\end{itemize}
+\begin{equation}
+  \mbox{短絡比} K_s = \frac{I_f'}{I_f''} = \frac{I_s}{I_n}
+\end{equation}
+
+\subsection{同期インピーダンス}
+\begin{equation}
+  Z_s = \frac{\frac{V_n}{\sqrt{3}}}{I_s}\, [\Omega]
+\end{equation}
+
+\subsection{百分率同期インピーダンス}
+\begin{eqnarray}
+  \%Z_s &=& \frac{Z_sI_n}{\frac{V_n}{\sqrt{3}}} \cdot 100\\
+  &=& \frac{I_f''}{I_f'} \cdot 100\, [\textrm{\%}]
+\end{eqnarray}
+
+\subsection{定格電流}
+\begin{equation}
+  I_n = \frac{P_n}{\sqrt{3}V_n}\, [\textrm{A}]
+\end{equation}
+
+\subsection{三相短絡電流}
+\begin{equation}
+  I_s = \frac{V_n}{\sqrt{3}Z_s}\, [\textrm{A}]
+\end{equation}
+
+\subsection{同期速度}
+\begin{itemize}
+  \item 同期回転数．
+  \item 定常運転時は同期回転数で回転．
+\end{itemize}
+\begin{equation}
+  f = pN_s \cdot \frac{1}{60}\, [\textrm{Hz}]
+\end{equation}
+\begin{subnumcases}
+  {}
+  f:\mbox{周波数}[\textrm{Hz}]\nonumber \\
+  p:\mbox{対極数}\nonumber \\
+  N_s:\mbox{同期速度}[\textrm{rpm}]\nonumber
+\end{subnumcases}
+
+これを変形して
+\begin{equation}
+  N_s = \frac{f}{p} \cdot 60\, [\textrm{rpm}]
+\end{equation}
+
+  \pic{imgs/dummy.png}
+
+
+\subsection{電圧変動率}
+\begin{equation}
+  \epsilon = (E_0 - V_n) \cdot 100\, [\textrm{\%}]
+\end{equation}
+\begin{subnumcases}
+  {}
+  E_0:\mbox{無負荷電圧}[\textrm{V}]\nonumber \\
+  V_n:\mbox{定格の端子電圧}[\textrm{V}]\nonumber
+\end{subnumcases}

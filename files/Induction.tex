@@ -1,0 +1,99 @@
+\section{誘導機}
+\subsection{誘導機}
+
+\begin{classify}{\fbox{誘導機}}
+  \classf{発電機}
+\class
+{
+  \begin{classify}{\fbox{電動機}}
+    \classf{三相}
+    \classf{単相}
+\end{classify}
+}
+\end{classify}
+
+\begin{itemize}
+  \item 固定子の作る回転磁界により，電気伝導体の回転子に誘導
+  \item 電流が発生し，滑りに対応した回転トルクが発生．
+  \item 堅牢，安価，取り扱いが容易．
+  \item 一般に「誘導機→三相交流誘導電動機」
+  \item 回転子導体の種類により，かご形と巻線形に分類．
+  \item 交流電源の種類により，単相と三相に大別．
+\end{itemize}
+
+\subsection{回転子導体の構造による分類}
+\subsubsection{かご形誘導電動機}
+\begin{itemize}
+  \item トルク制御と励磁制御を分離したベクトル制御方式は，直流電動機のような速度制御が可能．
+  \item 構造が簡単，堅牢，安価
+\end{itemize}
+
+\subsubsection{巻線形誘導電動機}
+\begin{itemize}
+  \item スリップリングが接続されている．
+  \item ブラシはスリップリングに接続されている．
+\end{itemize}
+
+\subsection{回転磁界}
+\begin{itemize}
+  \item S・N極が中点もしくは，ある軸を中心に回転しているかのように極性が変化する磁界．
+\end{itemize}
+
+\subsection{同期速度}
+\begin{eqnarray}
+  n_s &=& \frac{f}{p}\, [\textrm{rps}] \\
+  N_s &=& \frac{2f}{P} \cdot 60\, [\textrm{rpm}]
+\end{eqnarray}
+\begin{subnumcases}
+  {}
+  n_s:\mbox{回転磁界の回転数}[\textrm{rps}]\nonumber \\
+  N_s:\mbox{同期速度}[\textrm{rpm}]\nonumber \\
+  f:\mbox{周波数}[\textrm{Hz}]\nonumber \\
+  p:\mbox{対極数}\nonumber \\
+  P:\mbox{極数}(=2p)\nonumber
+\end{subnumcases}
+
+\subsection{すべり}
+\begin{itemize}
+  \item 相対速度と同期速度との比
+  \item 相対速度は同期速度$N_s$と実際の回転数$N$との差
+\end{itemize}
+\begin{eqnarray}
+  S &=& \frac{N_s - N}{N_s}\\
+  N &=& N_s(1-S) \, [\textrm{rpm}]
+\end{eqnarray}
+\begin{subnumcases}
+  {}
+  S:\mbox{すべり}\nonumber \\
+  N_s:\mbox{同期速度}[\textrm{rpm}]\nonumber \\
+  N:\mbox{実際の回転数}[\textrm{rpm}]\nonumber
+\end{subnumcases}
+
+\subsubsection{2次周波数}
+\begin{equation}
+  f_{2s} = S \cdot f_1\, [\textrm{Hz}]
+\end{equation}
+
+\subsubsection{一相の2次誘導起電力}
+\begin{equation}
+  E_{2s} = S \cdot E_2\, [\textrm{V}]
+\end{equation}
+
+\subsubsection{一相の1次誘導起電力}
+\begin{equation}
+  E_1 : E_{2s} = 1 : S
+\end{equation}
+
+\subsection{電力}
+\begin{equation}
+  \mbox{効率} \eta = \frac{P_m}{P_1}
+\end{equation}
+\begin{equation}
+  \mbox{2次入力} : \mbox{2次出力} : \mbox{2次銅損} = 1: 1-S : S
+\end{equation}
+
+\subsection{トルク}
+\begin{eqnarray}
+  T &=& \frac{P_m}{\omega} [\textrm{Nm}]\\
+  \omega &=& 2 \pi N \, [\textrm{rad/s}]
+\end{eqnarray}
